@@ -81,12 +81,34 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contactMe" class="section-padding">
+    <section id="contact" class="section-padding">
         <div class="container">
             <h2 class="section-title">{{ $text['contact_section_title'] ?? '04. Contact Me' }}</h2>
-            <div class="row justify-content-center">
+            <div class="row g-5">
+                <!-- Info Column -->
+                <div class="col-lg-4">
+                    <div class="about-card h-100 d-flex flex-column justify-content-center">
+                        <h4 class="mb-4" style="color: var(--neon-red); font-family: 'Space Grotesk';">Direct_Uplink</h4>
+                        
+                        <div class="mb-4">
+                            <label class="text-uppercase small text-dim d-block mb-1">Email</label>
+                            <a href="mailto:amirmahdishahbazi1382@gmail.com" class="text-white text-decoration-none fs-5">amirmahdishahbazi1382@gmail.com</a>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="text-uppercase small text-dim d-block mb-1">Phone</label>
+                            <a href="tel:+989913067090" class="text-white text-decoration-none fs-5">+98 991 306 7090</a>
+                        </div>
+
+                        <div>
+                            <label class="text-uppercase small text-dim d-block mb-1">Location</label>
+                            <span class="text-white fs-5">Qom, Iran</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
                 <div class="col-lg-8">
-                    <!-- Loading the Contact Form Component -->
                     <livewire:contact-form />
                 </div>
             </div>

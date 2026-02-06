@@ -86,12 +86,29 @@
 
     {{ $slot }}
 
-    <footer class="py-5" style="border-top: 1px solid rgba(255,0,60,0.2);">
-        <div class="container text-center">
-            <p class="small text-dim">
-                {{ \App\Models\Setting::getValue('footer_status', app()->getLocale()) ?? 'SYSTEM_STATUS: STABLE' }} 
-                // &copy; {{ date('Y') }} AMIR SHAHBAZI
-            </p>
+    <!-- Replace the current footer in app.blade.php with this -->
+    <footer class="py-5" style="border-top: 1px solid rgba(255,0,60,0.2); background: rgba(0,0,0,0.5);">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- System Status -->
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <p class="small text-dim mb-0">
+                        &copy; {{ date('Y') }} AMIR SHAHBAZI
+                    </p>
+                </div>
+
+                <!-- Static Contact Info -->
+                <div class="col-md-8 text-center text-md-end">
+                    <div class="d-flex flex-column flex-md-row justify-content-md-end gap-3 gap-md-5">
+                        <a href="mailto:amirmahdishahbazi1382@gmail.com" class="text-decoration-none text-dim hov-neon">
+                            <i class="fas fa-envelope me-2" style="color: var(--neon-red);"></i> amirmahdishahbazi1382@gmail.com
+                        </a>
+                        <a href="tel:+989913067090" class="text-decoration-none text-dim hov-neon">
+                            <i class="fas fa-phone me-2" style="color: var(--neon-red);"></i> +98 991 306 7090
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
